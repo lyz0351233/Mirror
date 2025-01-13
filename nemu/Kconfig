@@ -129,7 +129,7 @@ menu "Testing and Debugging"
 config WATCHPOINT
   bool "Enable watchpoint"
   default n
-  
+
 config TRACE
   bool "Enable tracer"
   default y
@@ -149,7 +149,11 @@ config ITRACE
   bool "Enable instruction tracer"
   default y
 
-config ITRACE_COND
+config MTRACE
+  bool "Enable memory tracer"
+  default y
+
+  config ITRACE_COND
   depends on ITRACE
   string "Only trace instructions when the condition is true"
   default "true"
