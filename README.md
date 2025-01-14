@@ -9,3 +9,5 @@ bash init.sh subproject-name
 [lecture note]: https://ysyx.oscc.cc/docs/
 
 只是为了pa3而凑数提交的
+
+Merge branch 'pa2'
