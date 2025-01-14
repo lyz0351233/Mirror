@@ -56,18 +56,6 @@ module ysyx_24110006_SRAM(
 /*     count <= out; */
 /* end */
 
-
-//wready
-always@(posedge i_clock)begin
-  /* if(i_reset) wready <= 0; */
-  /* else if(wvalid && count == 0 && !wready) */
-  /*   wready <= 1; */
-  /* else if(wvalid && wready) */
-  /*   wready <= 0; */
-  wready <= 1;
-end
-
-
 reg [31:0] araddr;
 reg arready;
 reg [31:0] rdata;
@@ -150,7 +138,15 @@ always@(posedge i_clock)begin
     awaddr <= i_axi_awaddr;
   end
 end
-
+//wready
+always@(posedge i_clock)begin
+  /* if(i_reset) wready <= 0; */
+  /* else if(wvalid && count == 0 && !wready) */
+  /*   wready <= 1; */
+  /* else if(wvalid && wready) */
+  /*   wready <= 0; */
+  wready <= 1;
+end
 //wdata
 always@(posedge i_clock)begin
   if(i_reset) wdata <= 0;
