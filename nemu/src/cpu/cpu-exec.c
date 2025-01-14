@@ -50,6 +50,7 @@ void watch_update(){
     if (flag && nemu_state.state != NEMU_END) nemu_state.state = NEMU_STOP;
 }
 #endif
+
 #ifdef CONFIG_ITRACE
 #define MAX_RING_BUFFER 10
 int buffer_index = 0;
