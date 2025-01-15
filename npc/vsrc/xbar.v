@@ -98,9 +98,9 @@ output [3:0] o_axi_bid,
   output o_axi_rready2
 );
 
-`define UART 32'ha00003f8
-`define RTC_ADDR 32'ha0000048
-`define RTC_ADDR_HIGH 32'ha000004c
+/* `define UART 32'ha00003f8 */
+`define RTC_ADDR 32'h02000000
+`define RTC_ADDR_HIGH 32'h02000004
 
 /* wire is_write_uart = i_axi_awaddr == `UART; */
 wire is_read_rtc = i_axi_araddr == `RTC_ADDR || i_axi_araddr == `RTC_ADDR_HIGH;
