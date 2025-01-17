@@ -152,7 +152,6 @@ output [3:0] o_axi_bid,
 `endif
 /* wire is_write_uart = i_axi_awaddr == `UART; */
 wire is_read_rtc = i_axi_araddr == `RTC_ADDR || i_axi_araddr == `RTC_ADDR_HIGH;
-
 reg r_is_read_rtc;
 
 always@(posedge i_clock)begin
