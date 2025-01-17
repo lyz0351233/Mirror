@@ -27,6 +27,7 @@ always@(posedge i_clock)begin
   if(is_full) hmtime <= 0;
   else if(&lmtime) hmtime <= hmtime + 1;
 end
+
 reg [31:0] araddr;
 reg arready;
 reg [31:0] rdata;
