@@ -23,7 +23,8 @@ VERILATOR_CFLAGS += -MMD --build -cc  \
 LIBS += -lcapstone
 ARGS ?=
 
-VERILATOR_CFLAGS += -DCONFIG_ICACHE
+# VERILATOR_CFLAGS += -DCONFIG_ICACHE
+# CXXFLAGS += -DCONFIG_ICACHE
 
 BUILD_DIR = ./build
 OBJ_DIR = $(BUILD_DIR)/obj_dir
@@ -85,8 +86,8 @@ gdb: $(BIN)
 	gdb --args $(BIN) $(IMG) $(ARGS)
 clean:
 	rm -rf $(BUILD_DIR)
-perf:
+perf: 
 	python3 perf.py
-	
-		
+
+
 include ../Makefile
